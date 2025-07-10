@@ -5,7 +5,7 @@ import Values from "../components/section/Values";
 
 export default function About() {
   return (
-    <div className="bg-[#09090F] min-h-screen">
+    <div>
       <AboutHero />
       <Mission />
       <Vision />
