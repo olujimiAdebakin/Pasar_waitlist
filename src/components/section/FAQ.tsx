@@ -51,19 +51,19 @@ const FaqSection: React.FC = () => {
   };
 
   return (
-    <section className="max-w-3xl px-4 py-16 mx-auto">
+    <section className="max-w-3xl px-4 py-16 mx-auto montserrat">
       <h2 className="mb-10 text-3xl font-bold text-center text-white">
         Frequently Asked Questions
       </h2>
       <div className="space-y-6">
         {faqData.map((item, index) => (
-          <div key={index} className="pb-4 border-b">
+          <div key={index} className="pb-4 border-b border-b-[#454545]">
             <button
-              className="flex items-center justify-between w-full text-lg font-medium text-left text-gray-400 hover:text-indigo-600 focus:outline-none"
+              className="flex items-center justify-between w-full text-lg font-medium text-left text-gray-400 hover:text-indigo-600 focus:outline-none border-l-[5px]  border-[#4F46E5] px-[15px]"
               onClick={() => toggle(index)}
             >
               {item.question}
-              <span className="ml-4 text-xl transition-all duration-500 ease-in-out">
+              <span className="ml-4 text-xl transition-all duration-500 ease-in-out border-l-4 rounded-3xl border-[#4F46E5]">
                 {activeIndex === index ? "−" : "+"}
               </span>
             </button>
