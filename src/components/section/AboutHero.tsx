@@ -22,23 +22,26 @@ const AboutHero: React.FC = () => {
         </p>
 
         {/* Stats grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mt-16">
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-[#4F46E5] montserrat">
-              100K+
+              Agentic
             </div>
-            <div className="text-gray-400 text-sm mt-2 urbanist">
-              Future Users
-            </div>
+            <div className="text-gray-400 text-sm mt-2 urbanist">Commerce</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-[#4F46E5] montserrat">
-              24/7
+              Crypto
             </div>
-            <div className="text-gray-400 text-sm mt-2 urbanist">
-              AI Support
-            </div>
+            <div className="text-gray-400 text-sm mt-2 urbanist">Payment</div>
           </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-[#4F46E5] montserrat">
+              Escrow
+            </div>
+            <div className="text-gray-400 text-sm mt-2 urbanist">System</div>
+          </div>
+
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-[#4F46E5] montserrat">
               Global
