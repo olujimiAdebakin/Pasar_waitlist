@@ -9,7 +9,7 @@ export default function Team() {
       <TeamHero />
       <TeamMembers />
       <Culture />
-      <Advisors />
+      {/* <Advisors /> */}
     </div>
   );
 }

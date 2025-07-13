@@ -109,9 +109,9 @@ const TeamMembers: React.FC = () => {
                   </div>
                 </div>
                 {/* Status indicator */}
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-[#1E1B4B] flex items-center justify-center">
+                {/* <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-[#1E1B4B] flex items-center justify-center">
                   <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></div>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
