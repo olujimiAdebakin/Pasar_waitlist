@@ -1,16 +1,14 @@
 import { useState } from "react";
-import Header from "../components/ui/Header";
-import Footer from "../components/ui/Footer";
 const features = [
   {
     title: "Escrow-Protected Payments",
     desc: "Pasar puts your security first by locking your funds in a smart escrow until your order is confirmed. That means sellers don’t get paid until you've received your item and agreed it's exactly what was promised. It removes the risk of fraud, ghosting, or delivery issues — giving both buyers and sellers confidence in every transaction. It’s transparency you can track, powered by blockchain.",
-    icon: "/icons/icons8-globe-showing-europe-africa-96.png",
+    icon: "/icons/icons8-shield-96.png",
     color: "bg-gradient-to-tr from-[#4F46E5] to-[#6E51E0]",
   },
   {
     title: "Crypto & Fiat Flexibility",
-    desc: "Whether you're using a card, local bank, Binance Pay, or stablecoins like USDT or USDC, Pasar makes payments seamless. You can shop however you prefer — even without prior crypto experience. For crypto users, we support wallet connections and auto-conversion to stablecoins for escrow. For fiat users, it's simple checkout via Naira. We bridge Web2 and Web3 to suit every user, beginner to pro.",
+    desc: "Whether you're using a card, local bank or stablecoins like USDT or USDC, Pasar makes payments seamless. You can shop however you prefer — even without prior crypto experience. For crypto users, we support wallet connections and auto-conversion to stable-coins for escrow. For fiat users, it's simple checkout via Naira. We bridge Web2 and Web3 to suit every user, beginner to pro.",
     icon: "/icons/icons8-ngn-96.png",
     color: "bg-gradient-to-tr from-[#6E51E0] to-[#4F46E5]",
   },
@@ -29,15 +27,16 @@ const features = [
   {
     title: "Dispute Resolution That Works",
     desc: "Pasar makes sure disputes don’t drag on or get ignored. Based on order value, disputes are either reviewed instantly by our in-house AI system or escalated to human admins for deeper investigation. Buyers must upload proof, and sellers’ original media is pulled from the listing. The system handles evidence, timestamps, metadata, and ensures fair outcomes — protecting both sides.",
-    icon: "/icons/icons8-scales-68.png",
+    icon: "/icons/icons8-review-96.png",
     color: "bg-gradient-to-tr from-[#6E51E0] to-[#4F46E5]",
   },
-  {
+  /*{
+    /*
     title: "Mobile-First, Africa-Ready",
     desc: "We’ve built Pasar with the realities of emerging markets in mind. The platform is light, fast, responsive, and works great on both low- and high-end devices. It’s fully optimized for Android and iOS, supports local currencies and languages, and integrates with regional logistics and delivery systems. Whether you’re in Lagos, Nairobi, or Accra — Pasar is built for you.",
     icon: "/icons/icons8-globe-showing-europe-africa-96.png",
     color: "bg-gradient-to-tr from-[#4F46E5] to-[#6E51E0]",
-  },
+  },*/
   {
     title: "Agentic AI Shopping Assistant",
     desc: "Skip the search bar. Pasar’s AI agent, Xiara, acts as your personal commerce guide. Just tell Xiara what you're looking for — in text or voice — and it will instantly recommend verified sellers, compare prices, and even negotiate better deals on your behalf. You don’t scroll endlessly or compare listings manually — the agent does the work, and you just choose and checkout.",
@@ -63,18 +62,24 @@ export default function FeaturesTabPanel() {
 
   return (
     <div className="min-h-screen w-full bg-[#09090F] flex flex-col items-center justify-start pt-[120px] pb-10 px-4 sm:px-8">
-      <Header />
-      <div className="w-full max-w-4xl mx-auto mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl montserrat animate-fade-in">
-          Features
+      {/* Main heading */}
+      <div className="mb-8">
+        <h1 className="text-6xl md:text-7xl font-bold text-white montserrat mb-4">
+          Pasar{" "}
+          <span className="text-[#4F46E5] bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] bg-clip-text text-transparent">
+            Features
+          </span>
         </h1>
-        <p className="max-w-2xl mx-auto text-lg sm:text-xl text-[#E6E8EC] font-[400] urbanist animate-fade-in-delay">
-          Discover the key functionalities and benefits that make Pasar the most
-          secure, crypto-ready marketplace in Africa.
-        </p>
+        <div className="w-24 h-1 bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] mx-auto rounded-full ml-[170px]"></div>
       </div>
+      <p className="text-xl md:text-2xl text-gray-300 montserrat text-center max-w-4xl mx-auto leading-relaxed mb-12">
+        Smarter shopping. Safer selling. Built for trust, powered by technology
+        — Pasar brings buyers and sellers together with AI assistance,
+        escrow-backed payments, and real-time transparency. Whether you’re using
+        crypto or cash, every transaction is secure and seamless.
+      </p>
       <div className="flex flex-col md:flex-row w-full min-h-[60vh] items-start justify-center gap-8 pt-12">
-        <div className="flex flex-col gap-6 md:flex-col">
+        <div className="flex flex-col gap-6 md:flex-col ">
           {features.map((f, idx) => (
             <div
               key={f.title}
@@ -100,7 +105,7 @@ export default function FeaturesTabPanel() {
                   className={`w-full md:w-[420px] md:ml-10 transition-transform duration-300 z-[2] p-8 rounded-2xl`}
                   style={{
                     background: f.color.replace("bg-gradient-to-tr", ""),
-                    boxShadow: "0 4px 24px rgba(99,102,241,0.12)",
+                    boxShadow: "0 4px 24px rgba(99,102,241,0.9)",
                   }}
                 >
                   <div className="flex flex-col items-center justify-center text-center md:h-auto">
@@ -122,7 +127,6 @@ export default function FeaturesTabPanel() {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,7 +1,5 @@
 import CTA from "../components/section/CTA";
 import Hero from "../components/section/Hero";
-import Footer from "../components/ui/Footer";
-import Header from "../components/ui/Header";
 import FaqSection from "../components/section/FAQ";
 import HowItWorks from "../components/section/HowItWorks";
 
@@ -34,16 +32,16 @@ export default function Home() {
       inputRef.current.focus();
     }
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to top when component mounts
+  });
   return (
     <FocusInputContext.Provider value={focusInput}>
       <div className="w-full">
-        <Header />
         <Hero inputRef={inputRef} emailCount={emailCount} />
         <HowItWorks />
         <FaqSection />
         <CTA />
-        <Footer />
       </div>
     </FocusInputContext.Provider>
   );

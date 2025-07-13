@@ -23,7 +23,7 @@ const tabs = [
   },
 ];
 
-const RADIUS_DESKTOP = 280; // px, large circle for desktop
+const RADIUS_DESKTOP = 300; // px, large circle for desktop
 const RADIUS_MOBILE = 100; // px, smaller for mobile
 const TAB_SIZE_DESKTOP = 100;
 const TAB_SIZE_MOBILE = 100;
@@ -97,10 +97,10 @@ export default function HowItWorks() {
           })}
         </div>
         {/* Content: below the circle on mobile, centered in circle on desktop */}
-        <div className="flex justify-center  w-full mt-[100px] md:-mt-[230px] montserrat">
+        <div className="flex justify-center items-center w-full mt-[100px] md:-mt-[230px] montserrat">
           <div
             key={active}
-            className="bg-[#050c21] text-white rounded-2xl shadow-[inset_2px_3px_15px_rgba(0,0,0,0.5),0px_0px_10px_rgba(255,255,255,0.5)] px-4 py-6 text-start text-base sm:text-lg font-medium animate-fadeInDrop w-full max-w-[320px] md:max-w-[400px] sm:absolute sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:w-[320px] sm:min-h-[120px]"
+            className="bg-[#050c21] text-white rounded-2xl shadow-[inset_2px_3px_15px_rgba(0,0,0,0.5),0px_0px_10px_rgba(255,255,255,0.5)] px-4 py-6 text-center text-base sm:text-lg font-medium animate-fadeInDrop w-full max-w-[320px] md:max-w-[400px] sm:absolute sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:w-[320px] sm:min-h-[120px]"
             style={{
               animation: "fadeInDrop 3s cubic-bezier(.7,1.7,.5,.9)",
             }}

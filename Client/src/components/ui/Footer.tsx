@@ -1,8 +1,12 @@
+import { useState } from "react";
 import Button from "./Button";
-
+import ContactModal from "./ContactModal";
 export default function Footer() {
+  const [showContact, setShowContact] = useState(false);
+
   return (
     <footer className="w-full min-h-[350px] md:h-[500px] bg-[#09090F] px-4 sm:px-8 md:px-[80px] py-10 md:py-[80px] box-border text-white">
+      <ContactModal open={showContact} onClose={() => setShowContact(false)} />
       <div className="flex flex-col gap-8 md:gap-0">
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-center mb-8 md:mb-[57px] gap-4 md:gap-[20px] w-full max-w-2xl">
@@ -18,7 +22,10 @@ export default function Footer() {
         </div>
         <div className="min-h-[120px] md:h-[205px] flex flex-col justify-between gap-6 md:gap-0">
           <div className="flex justify-center w-full mb-4 md:mb-0">
-            <Button className="font-[500] text-[14px] w-full max-w-[180px] h-[40px] text-nowrap text-white flex justify-center items-center bg-[#4F46E5] py-[10px] px-[16px] rounded-full cursor-pointer hover:bg-[hsl(244,37%,56%)] active:bg-[#4F46E5] urbanist">
+            <Button
+              className="font-[500] text-[14px] w-full max-w-[180px] h-[40px] text-nowrap text-white flex justify-center items-center bg-[#4F46E5] py-[10px] px-[16px] rounded-full cursor-pointer hover:bg-[hsl(244,37%,56%)] active:bg-[#4F46E5] urbanist"
+              onClick={() => setShowContact(true)}
+            >
               👋 Contact Us
             </Button>
           </div>

@@ -5,6 +5,7 @@ import HorizontalScroll from "../ui/inifiteScroll";
 import { AnimatedTooltip } from "../ui/userDeck";
 import CongratsModal from "../ui/CongratsModal";
 import { useState /*useContext*/ } from "react";
+import ErrorMessage from "../ui/ErrorMessage";
 //import { FocusInputContext } from "../../pages/Home";
 import axios from "axios";
 function Hero({
@@ -17,6 +18,7 @@ function Hero({
   const [showModal, setShowModal] = useState(false);
   const [email, setEmail] = useState("");
   const [disabled, setDisabled] = useState(false);
+  const [emailError, setEmailError] = useState("");
   const people = [
     {
       id: 1,
@@ -66,13 +68,13 @@ function Hero({
     setDisabled(true);
 
     if (!email) {
-      alert("Please enter your email");
+      setEmailError("Please enter your email");
       setDisabled(false);
       return;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address");
+      setEmailError("Please enter a valid email address");
       setDisabled(false); // <-- re-enable before returning
       return;
     }
@@ -91,12 +93,14 @@ function Hero({
         setShowModal(true);
         setEmail("");
       } else {
-        alert("Invalid email failed to join the waitlist. Please try again.");
+        setEmailError(
+          "Invalid email. Failed to join the waitlist. Please try again."
+        );
       }
     } catch (error) {
-      console.error("Error joining waitlist:", error);
-      alert(
-        "An error occurred Or You email has already been registered. Please try again later."
+      console.log("Error joining waitlist:", error);
+      setEmailError(
+        "An error occurred. Or your email has already been registered. Please try again later."
       );
     }
     setDisabled(false);
@@ -141,7 +145,10 @@ function Hero({
                 <Input
                   ref={inputRef}
                   type="email"
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setEmailError("");
+                  }}
                   placeholder="Enter Your Email"
                   className="w-full md:w-[347px] h-[44px] text-white rounded-[6px] px-[16px] py-[4px] border border-purple-950 bg-[#131320] z-[2] urbanist"
                 />
@@ -155,6 +162,7 @@ function Hero({
                   Join Waitlist
                 </Button>
               </div>
+              <ErrorMessage message={emailError} />
             </div>
             <div className="flex flex-row items-center justify-center w-full mt-5 mb-5">
               <AnimatedTooltip items={people} />

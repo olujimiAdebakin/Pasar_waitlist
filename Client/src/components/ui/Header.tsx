@@ -45,7 +45,7 @@ export default function Header() {
           link.to === "#join" ? (
             <a
               key={link.label}
-              href="#join"
+              href="/"
               className={`transition-all duration-300 px-2 py-1 rounded-lg ${
                 location.hash === "#join"
                   ? "text-[#4F46E5] font-bold underline underline-offset-4"
@@ -81,9 +81,9 @@ export default function Header() {
         <Button
           className="w-[141px] py-[10px] px-[20px] text-center text-white text rounded-[8px] font-[600] urbanist text-[16px] bg-[#4F46E5] hover:bg-[#4338CA] active:bg-[#4F46E5]"
           onClick={() => {
+            navigate("/");
             if (focusInput) focusInput();
             window.location.hash = "#join";
-            navigate("/");
           }}
         >
           Join Waitlist
@@ -131,7 +131,7 @@ export default function Header() {
             link.to === "#join" ? (
               <a
                 key={link.label}
-                href="#join"
+                href="/"
                 className={`transition-all duration-300 px-2 py-1 rounded-lg ${
                   location.hash === "#join"
                     ? "text-[#4F46E5] font-bold underline underline-offset-4"
@@ -172,6 +172,7 @@ export default function Header() {
               setDrawerOpen(false);
               if (focusInput) focusInput();
               window.location.hash = "#join";
+              navigate("/");
             }}
           >
             Join Waitlist

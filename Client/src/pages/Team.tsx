@@ -1,4 +1,8 @@
+import { useEffect } from "react";
 export default function Team() {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to top when component mounts
+  });
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="mb-4 text-4xl font-bold">Team</h1>

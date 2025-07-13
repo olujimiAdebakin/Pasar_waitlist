@@ -15,7 +15,7 @@ const sendMail = async (email) => {
 
   // HTML email content
   const html = `
-  <div style="background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); padding: 32px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); font-family: 'Segoe UI', Arial, sans-serif; text-align: center; max-width: 520px; margin: auto; line-height: 1.6;">
+  <div style="background: linear-gradient(135deg, #09090f 0%, #4F46E5 100%); padding: 32px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); font-family: 'Segoe UI', Arial, sans-serif; text-align: center; max-width: 520px; margin: auto; line-height: 1.6;">
   
   <img src="https://s3.tebi.io/recipe-dazzle/Pasar%205.svg" alt="Pasar Logo" style="width: 80px; margin-bottom: 16px;" />
 
