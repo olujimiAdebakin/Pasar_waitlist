@@ -25,10 +25,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
     return () => clearInterval(interval);
   }, [autoSlide, slideInterval, images.length]);
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -92,21 +88,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
             </svg>
           </button>
         </div>
-      </div>
-
-      {/* Dots indicator */}
-      <div className="flex justify-center mt-4 space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-200 ${
-              index === currentIndex
-                ? "bg-[#4F46E5] w-6"
-                : "bg-gray-500 hover:bg-gray-400"
-            }`}
-          />
-        ))}
       </div>
     </div>
   );

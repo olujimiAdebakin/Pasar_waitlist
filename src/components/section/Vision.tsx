@@ -46,7 +46,7 @@ const Vision: React.FC = () => {
         {/* Main content with galleries */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           {/* Left Gallery */}
-          <div className="h-96">
+          <div className="h-[480px]">
             <VerticalGallery
               items={leftGalleryItems}
               direction="up"
