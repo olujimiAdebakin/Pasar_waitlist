@@ -162,7 +162,10 @@ function Hero({
                   Join Waitlist
                 </Button>
               </div>
-              <ErrorMessage message={emailError} />
+              <ErrorMessage
+                message={emailError}
+                onClose={() => setEmailError("")}
+              />
             </div>
             <div className="flex flex-row items-center justify-center w-full mt-5 mb-5">
               <AnimatedTooltip items={people} />
