@@ -60,8 +60,8 @@ const Mission: React.FC = () => {
 
           {/* Right content - Visual element */}
           <div className="relative">
-            <div className="relative z-10 bg-gradient-to-br from-[#1E1B4B] to-[#312E81] rounded-2xl p-8 border border-purple-800/30 backdrop-blur-sm">
-              <div className="text-center">
+            <div className="relative z-10 bg-gradient-to-br from-[#1E1B4B] to-[#312E81] rounded-2xl p-8 border border-purple-800/30 backdrop-blur-sm h-[500px] flex items-center">
+              <div className="text-center w-full">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] rounded-full flex items-center justify-center mx-auto mb-6">
                   <svg
                     className="w-10 h-10 text-white"

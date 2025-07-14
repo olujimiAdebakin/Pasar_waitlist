@@ -30,95 +30,123 @@ const Vision: React.FC = () => {
     <section className="min-h-screen bg-[#0F0F1A] px-6 py-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-white montserrat mb-8">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4">
+            <span className="text-sm uppercase tracking-widest text-[#4F46E5] font-medium urbanist">
+              Where We're Heading
+            </span>
+          </div>
+          <h2 className="text-5xl md:text-7xl font-bold text-white montserrat mb-6">
             Our{" "}
-            <span className="text-[#4F46E5] bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] bg-clip-text text-transparent">
+            <span className="text-[#4F46E5] bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#3B82F6] bg-clip-text text-transparent">
               Vision
             </span>
           </h2>
-          <p className="text-xl text-gray-300 urbanist max-w-4xl mx-auto leading-relaxed">
+          <div className="w-32 h-1 bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#3B82F6] mx-auto rounded-full mb-8"></div>
+          <p className="text-xl md:text-2xl text-gray-300 urbanist max-w-5xl mx-auto leading-relaxed">
             Creating a world where commerce is intelligent, inclusive, and
             infinitely accessible to everyone, everywhere.
           </p>
         </div>
 
         {/* Main content with galleries */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
           {/* Left Gallery */}
-          <div className="h-[550px]">
-            <VerticalGallery
-              items={leftGalleryItems}
-              direction="up"
-              speed={30}
-              className="h-full"
-            />
+          <div className="h-[600px] group">
+            <div className="relative h-full">
+              <VerticalGallery
+                items={leftGalleryItems}
+                direction="up"
+                speed={30}
+                className="h-full"
+              />
+              {/* Subtle gradient overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F1A]/20 via-transparent to-[#0F0F1A]/20 pointer-events-none rounded-2xl"></div>
+            </div>
           </div>
 
           {/* Center Content */}
-          <div className="text-center h-[550px] flex items-center">
-            <div className="bg-gradient-to-br from-[#1E1B4B] to-[#312E81] rounded-2xl p-8 border border-purple-800/30 backdrop-blur-sm w-full">
-              <div className="w-24 h-24 bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg
-                  className="w-12 h-12 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
-                  />
-                </svg>
+          <div className="text-center h-[600px] flex items-center">
+            <div className="bg-gradient-to-br from-[#1E1B4B] to-[#312E81] rounded-3xl p-10 border border-purple-800/30 backdrop-blur-sm w-full relative overflow-hidden group hover:scale-[1.02] transition-all duration-500">
+              {/* Background pattern */}
+              <div className="absolute inset-0 opacity-5">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#4F46E5] to-transparent rounded-full blur-2xl"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#7C3AED] to-transparent rounded-full blur-2xl"></div>
               </div>
-              <h3 className="text-3xl font-bold text-white montserrat mb-6">
-                The Future of Commerce
-              </h3>
-              <p className="text-gray-300 urbanist leading-relaxed mb-6">
-                Imagine a marketplace where artificial intelligence anticipates
-                your needs, blockchain ensures trust, and global connectivity
-                makes distance irrelevant.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center justify-center gap-3">
-                  <div className="w-3 h-3 bg-[#4F46E5] rounded-full"></div>
-                  <span className="text-white text-sm urbanist">
-                    Intelligent Automation
-                  </span>
+
+              <div className="relative z-10">
+                <div className="w-28 h-28 bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#3B82F6] rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-purple-500/20 group-hover:shadow-purple-500/40 transition-all duration-500">
+                  <svg
+                    className="w-14 h-14 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                    />
+                  </svg>
                 </div>
-                <div className="flex items-center justify-center gap-3">
-                  <div className="w-3 h-3 bg-[#7C3AED] rounded-full"></div>
-                  <span className="text-white text-sm urbanist">
-                    Global Accessibility
-                  </span>
-                </div>
-                <div className="flex items-center justify-center gap-3">
-                  <div className="w-3 h-3 bg-[#3B82F6] rounded-full"></div>
-                  <span className="text-white text-sm urbanist">
-                    Sustainable Growth
-                  </span>
+                <h3 className="text-4xl font-bold text-white montserrat mb-8 leading-tight">
+                  The Future of Commerce
+                </h3>
+                <p className="text-gray-300 urbanist leading-relaxed mb-8 text-lg">
+                  Imagine a marketplace where artificial intelligence
+                  anticipates your needs, blockchain ensures trust, and global
+                  connectivity makes distance irrelevant.
+                </p>
+                <div className="space-y-6">
+                  <div className="flex items-center justify-center gap-4 group/item hover:scale-105 transition-transform duration-300">
+                    <div className="w-4 h-4 bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] rounded-full shadow-lg shadow-purple-500/30"></div>
+                    <span className="text-white urbanist font-medium">
+                      Intelligent Automation
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-4 group/item hover:scale-105 transition-transform duration-300">
+                    <div className="w-4 h-4 bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] rounded-full shadow-lg shadow-purple-500/30"></div>
+                    <span className="text-white urbanist font-medium">
+                      Global Accessibility
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-4 group/item hover:scale-105 transition-transform duration-300">
+                    <div className="w-4 h-4 bg-gradient-to-r from-[#3B82F6] to-[#4F46E5] rounded-full shadow-lg shadow-blue-500/30"></div>
+                    <span className="text-white urbanist font-medium">
+                      Sustainable Growth
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Image Slider */}
-          <div className="h-[550px]">
-            <ImageSlider
-              images={sliderImages}
-              autoSlide={true}
-              slideInterval={4000}
-              className="h-full"
-            />
+          <div className="h-[600px] group">
+            <div className="relative h-full rounded-3xl overflow-hidden">
+              <ImageSlider
+                images={sliderImages}
+                autoSlide={true}
+                slideInterval={4000}
+                className="h-full"
+              />
+              {/* Enhanced border effect */}
+              <div className="absolute inset-0 border-2 border-gradient-to-r from-[#4F46E5]/20 via-[#7C3AED]/20 to-[#3B82F6]/20 rounded-3xl pointer-events-none"></div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Background decorations */}
-      <div className="absolute top-1/4 -left-32 w-64 h-64 bg-gradient-to-br from-[#4F46E5]/10 to-[#7C3AED]/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-gradient-to-br from-[#7C3AED]/10 to-[#3B82F6]/10 rounded-full blur-3xl"></div>
+      {/* Enhanced Background decorations */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-gradient-to-br from-[#4F46E5]/10 to-[#7C3AED]/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-gradient-to-br from-[#7C3AED]/10 to-[#3B82F6]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-[#3B82F6]/5 to-[#4F46E5]/5 rounded-full blur-3xl"></div>
+
+      {/* Floating particles */}
+      <div className="absolute top-20 left-1/4 w-2 h-2 bg-[#4F46E5] rounded-full animate-bounce delay-300"></div>
+      <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-[#7C3AED] rounded-full animate-bounce delay-700"></div>
+      <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-[#3B82F6] rounded-full animate-bounce delay-1000"></div>
     </section>
   );
 };
