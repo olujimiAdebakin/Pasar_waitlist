@@ -7,7 +7,7 @@ import Values from "../components/section/Values";
 export default function About() {
   useEffect(() => {
     window.scrollTo(0, 0); // Scrolls to top when component mounts
-  });
+  }, []);
   return (
     <div>
       <AboutHero />

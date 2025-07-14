@@ -34,7 +34,7 @@ export default function Home() {
   };
   useEffect(() => {
     window.scrollTo(0, 0); // Scrolls to top when component mounts
-  });
+  }, []);
   return (
     <FocusInputContext.Provider value={focusInput}>
       <div className="w-full">

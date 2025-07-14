@@ -17,6 +17,13 @@ const TeamMembers: React.FC = () => {
       gradient: "from-[#3B82F6] to-[#10B981]",
     },
     {
+      name: "Farooq Ashiru",
+      role: "Fullstack Engineer",
+      bio: "Fullstack developer with a passion for building intuitive user interfaces and scalable backend systems.",
+      image: "/team/farooq-ashiru.jpg", // Placeholder path
+      gradient: "from-[#10B981] to-[#F59E0B]",
+    },
+    {
       name: "Olujimi Adebakin",
       role: "Blockchain Developer",
       bio: "Frontend developer skilled in React, Next.js, and TypeScript. Blockchain dev proficient in Solidity, Cairo, and Rust. Builds on chain.",
@@ -48,23 +55,23 @@ const TeamMembers: React.FC = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-b from-[#09090F] to-[#0F0F1A] px-6 py-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-white montserrat mb-8">
+        <div className="mb-16 text-center">
+          <h2 className="mb-8 text-5xl font-bold text-white md:text-6xl montserrat">
             The{" "}
             <span className="text-[#4F46E5] bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] bg-clip-text text-transparent">
               Team
             </span>
           </h2>
-          <p className="text-xl text-gray-300 urbanist max-w-4xl mx-auto leading-relaxed">
+          <p className="max-w-4xl mx-auto text-xl leading-relaxed text-gray-300 urbanist">
             Meet the visionaries and innovators driving Pasar's mission to
             revolutionize global commerce.
           </p>
         </div>
 
         {/* Team grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (
             <div
               key={index}
@@ -75,7 +82,7 @@ const TeamMembers: React.FC = () => {
                 <div
                   className={`w-24 h-24 mx-auto rounded-full bg-gradient-to-br ${member.gradient} p-1 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <div className="w-full h-full rounded-full bg-gray-700 flex items-center justify-center text-white text-2xl font-bold montserrat">
+                  <div className="flex items-center justify-center w-full h-full text-2xl font-bold text-white bg-gray-700 rounded-full montserrat">
                     {member.name
                       .split(" ")
                       .map((n) => n[0])
@@ -90,7 +97,7 @@ const TeamMembers: React.FC = () => {
 
               {/* Content */}
               <div className="text-center">
-                <h3 className="text-xl font-bold text-white montserrat mb-2">
+                <h3 className="mb-2 text-xl font-bold text-white montserrat">
                   {member.name}
                 </h3>
                 <p
@@ -98,7 +105,7 @@ const TeamMembers: React.FC = () => {
                 >
                   {member.role}
                 </p>
-                <p className="text-gray-300 text-sm urbanist leading-relaxed">
+                <p className="text-sm leading-relaxed text-gray-300 urbanist">
                   {member.bio}
                 </p>
               </div>

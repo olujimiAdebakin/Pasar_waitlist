@@ -3,17 +3,17 @@ import React from "react";
 const Mission: React.FC = () => {
   return (
     <section className="min-h-screen bg-gradient-to-b from-[#09090F] to-[#0F0F1A] px-6 py-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Left content */}
           <div>
-            <h2 className="text-5xl md:text-6xl font-bold text-white montserrat mb-8">
+            <h2 className="mb-8 text-5xl font-bold text-white md:text-6xl montserrat">
               Our{" "}
               <span className="text-[#4F46E5] bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] bg-clip-text text-transparent">
                 Mission
               </span>
             </h2>
-            <p className="text-lg text-gray-300 urbanist leading-relaxed mb-8">
+            <p className="mb-8 text-lg leading-relaxed text-gray-300 urbanist">
               To democratize commerce by creating an intelligent platform where
               trust is built through technology, transactions are seamless, and
               every participant thrives in a fair marketplace ecosystem.
@@ -22,7 +22,7 @@ const Mission: React.FC = () => {
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-[#4F46E5] rounded-full mt-3 flex-shrink-0"></div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white montserrat mb-2">
+                  <h3 className="mb-2 text-xl font-semibold text-white montserrat">
                     AI-Powered Intelligence
                   </h3>
                   <p className="text-gray-400 urbanist">
@@ -34,7 +34,7 @@ const Mission: React.FC = () => {
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-[#4F46E5] rounded-full mt-3 flex-shrink-0"></div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white montserrat mb-2">
+                  <h3 className="mb-2 text-xl font-semibold text-white montserrat">
                     Trust-First Approach
                   </h3>
                   <p className="text-gray-400 urbanist">
@@ -46,7 +46,7 @@ const Mission: React.FC = () => {
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-[#4F46E5] rounded-full mt-3 flex-shrink-0"></div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white montserrat mb-2">
+                  <h3 className="mb-2 text-xl font-semibold text-white montserrat">
                     Global Accessibility
                   </h3>
                   <p className="text-gray-400 urbanist">
@@ -60,8 +60,8 @@ const Mission: React.FC = () => {
 
           {/* Right content - Visual element */}
           <div className="relative">
-            <div className="relative z-10 bg-gradient-to-br from-[#1E1B4B] to-[#312E81] rounded-2xl p-8 border border-purple-800/30 backdrop-blur-sm h-[500px] flex items-center">
-              <div className="text-center w-full">
+            <div className="relative z-[1] bg-gradient-to-br from-[#1E1B4B] to-[#312E81] rounded-2xl p-8 border border-purple-800/30 backdrop-blur-sm h-[500px] flex items-center">
+              <div className="w-full text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] rounded-full flex items-center justify-center mx-auto mb-6">
                   <svg
                     className="w-10 h-10 text-white"
@@ -77,10 +77,10 @@ const Mission: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white montserrat mb-4">
+                <h3 className="mb-4 text-2xl font-bold text-white montserrat">
                   Innovation at Core
                 </h3>
-                <p className="text-gray-300 urbanist leading-relaxed">
+                <p className="leading-relaxed text-gray-300 urbanist">
                   We're not just building another marketplace. We're crafting
                   the future of how people discover, trust, and trade with each
                   other in the digital age.

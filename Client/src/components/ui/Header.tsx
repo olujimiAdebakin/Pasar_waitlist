@@ -35,7 +35,7 @@ export default function Header() {
   }, [drawerOpen]);
 
   return (
-    <header className="flex items-center justify-between w-full h-[72px] sm:h-[96px] px-4 sm:px-[40px] md:px-[80px] z-[3] fixed top-0">
+    <header className="flex items-center justify-between w-full h-[72px] sm:h-[96px] px-4 sm:px-[40px] md:px-[80px] z-[20] fixed top-0">
       <div>
         <img src="/icons/Pasar.svg" alt="pasar logo" />
       </div>

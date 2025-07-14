@@ -43,18 +43,18 @@ export default function ContactModal({
 
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-xl">
       <div className="bg-[#141416] rounded-xl p-8 w-full max-w-md shadow-lg relative">
         <button
-          className="absolute top-4 right-4 text-white text-2xl font-bold"
+          className="absolute text-2xl font-bold text-white top-4 right-4"
           onClick={onClose}
           aria-label="Close"
         >
           ×
         </button>
-        <h2 className="text-white text-2xl font-bold mb-4">Contact Us</h2>
+        <h2 className="mb-4 text-2xl font-bold text-white">Contact Us</h2>
         {success ? (
-          <div className="text-green-400 mb-4">
+          <div className="mb-4 text-green-400">
             Thank you! We'll get back to you soon.
           </div>
         ) : (
@@ -95,7 +95,7 @@ export default function ContactModal({
             </button>
           </form>
         )}
-        <p className="text-white mt-6 text-sm text-center">
+        <p className="mt-6 text-sm text-center text-white">
           Or email us at{" "}
           <a
             href="mailto:pasarhq@gmail.com"
