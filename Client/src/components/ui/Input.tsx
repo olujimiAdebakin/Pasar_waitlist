@@ -1,18 +1,20 @@
-import React, { InputHTMLAttributes } from "react";
+import React, { forwardRef } from "react";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   isLoading?: boolean;
 }
 
-const Input: React.FC<InputProps> = ({
-  className = "",
-  disabled = false,
-  isLoading = false,
-  ...props
-}) => {
-  return (
-    <input className={className} disabled={disabled || isLoading} {...props} />
-  );
-};
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ className = "", disabled = false, isLoading = false, ...props }, ref) => {
+    return (
+      <input
+        className={className}
+        disabled={disabled || isLoading}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
 
 export default Input;
