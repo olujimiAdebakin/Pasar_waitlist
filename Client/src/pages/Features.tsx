@@ -50,8 +50,8 @@ const features = [
     color: "bg-gradient-to-tr from-[#4338CA] to-[#6E51E0]",
   },
   {
-    title: "PasarScan Transaction Explorer",
-    desc: "Every transaction on Pasar — fiat or crypto — is visible in our custom-built PasarScan explorer. Users get a Pasar Transaction ID and on-chain hash, allowing them to track escrow status, delivery updates, refunds, and more. It gives buyers and sellers complete visibility without needing to leave the platform. Think of it like Etherscan — but made for everyday shoppers.",
+    title: "PasarScan",
+    desc: "PasarScan is a Transaction Explorer. Every transaction on Pasar — fiat or crypto — is visible in our custom-built PasarScan explorer. Users get a Pasar Transaction ID and on-chain hash, allowing them to track escrow status, delivery updates, refunds, and more. It gives buyers and sellers complete visibility without needing to leave the platform. Think of it like Etherscan — but made for everyday shoppers.",
     icon: "/icons/icons8-iris-scan-100.png",
     color: "bg-gradient-to-tr from-[#4F46E5] to-[#4338CA]",
   },
@@ -64,7 +64,7 @@ export default function FeaturesTabPanel() {
     <div className="min-h-screen w-full bg-[#09090F] flex flex-col items-center justify-start pt-[120px] pb-10 px-4 sm:px-8">
       {/* Main heading */}
       <div className="mb-8">
-        <h1 className="text-6xl md:text-7xl font-bold text-white montserrat mb-4">
+        <h1 className="mb-4 text-6xl font-bold text-white md:text-7xl montserrat">
           Pasar{" "}
           <span className="text-[#4F46E5] bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] bg-clip-text text-transparent">
             Features
@@ -72,7 +72,7 @@ export default function FeaturesTabPanel() {
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] mx-auto rounded-full ml-[170px]"></div>
       </div>
-      <p className="text-xl md:text-2xl text-gray-300 montserrat text-center max-w-4xl mx-auto leading-relaxed mb-12">
+      <p className="max-w-4xl mx-auto mb-12 text-xl leading-relaxed text-center text-gray-300 md:text-2xl montserrat">
         Smarter shopping. Safer selling. Built for trust, powered by technology
         — Pasar brings buyers and sellers together with AI assistance,
         escrow-backed payments, and real-time transparency. Whether you’re using

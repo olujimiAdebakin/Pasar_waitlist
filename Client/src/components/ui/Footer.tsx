@@ -11,12 +11,12 @@ export default function Footer() {
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-center mb-8 md:mb-[57px] gap-4 md:gap-[20px] w-full max-w-2xl">
             <p className="font-[700] text-[26px] sm:text-[32px] md:text-[40px] montserrat text-center">
-              Fast. Focused. Flexible.
+              Trade Boldly. Move Freely.
             </p>
-            <p className="font-[400] urbanist text-[15px] sm:text-[16px] text-center">
-              Pasar is built for speed, clarity, and adaptability, helping you
-              sell smarter and buy faster, whether you're in a bustling market
-              or scaling your online storefront across Africa.
+            <p className="font-[400] urbanist text-[15px] sm:text-[16px] text-center max-w-xl mx-auto">
+              Pasar gives you the power to buy and sell without limits — fast,
+              secure, and built for the modern African marketplace. From local
+              deals to cross-border sales, it's commerce on your terms.
             </p>
           </div>
         </div>
