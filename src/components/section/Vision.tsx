@@ -46,7 +46,7 @@ const Vision: React.FC = () => {
         {/* Main content with galleries */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           {/* Left Gallery */}
-          <div className="h-[480px]">
+          <div className="h-[550px]">
             <VerticalGallery
               items={leftGalleryItems}
               direction="up"
@@ -56,8 +56,8 @@ const Vision: React.FC = () => {
           </div>
 
           {/* Center Content */}
-          <div className="text-center">
-            <div className="bg-gradient-to-br from-[#1E1B4B] to-[#312E81] rounded-2xl p-8 border border-purple-800/30 backdrop-blur-sm">
+          <div className="text-center h-[550px] flex items-center">
+            <div className="bg-gradient-to-br from-[#1E1B4B] to-[#312E81] rounded-2xl p-8 border border-purple-800/30 backdrop-blur-sm w-full">
               <div className="w-24 h-24 bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg
                   className="w-12 h-12 text-white"
@@ -105,7 +105,7 @@ const Vision: React.FC = () => {
           </div>
 
           {/* Right Image Slider */}
-          <div className="h-[480px]">
+          <div className="h-[550px]">
             <ImageSlider
               images={sliderImages}
               autoSlide={true}
