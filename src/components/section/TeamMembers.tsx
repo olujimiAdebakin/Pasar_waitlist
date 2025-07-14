@@ -78,7 +78,7 @@ const TeamMembers: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-white montserrat mb-8">
-            Leadership{" "}
+            The{" "}
             <span className="text-[#4F46E5] bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] bg-clip-text text-transparent">
               Team
             </span>

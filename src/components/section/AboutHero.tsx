@@ -31,7 +31,7 @@ const AboutHero: React.FC = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-[#4F46E5] montserrat">
-              Crypto
+              Crypto & Fiat
             </div>
             <div className="text-gray-400 text-sm mt-2 urbanist">Payment</div>
           </div>
@@ -41,7 +41,6 @@ const AboutHero: React.FC = () => {
             </div>
             <div className="text-gray-400 text-sm mt-2 urbanist">System</div>
           </div>
-
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-[#4F46E5] montserrat">
               Global

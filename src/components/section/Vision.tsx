@@ -1,5 +1,6 @@
 import React from "react";
 import VerticalGallery from "../ui/VerticalGallery";
+import ImageSlider from "../ui/ImageSlider";
 
 const Vision: React.FC = () => {
   const leftGalleryItems = [
@@ -13,15 +14,16 @@ const Vision: React.FC = () => {
     "Sustainable commerce promoting eco-friendly practices",
   ];
 
-  const rightGalleryItems = [
-    "Community-driven reputation system building trust organically",
-    "AI-powered fraud detection preventing malicious activities",
-    "Multi-currency support with automatic conversion",
-    "Mobile-first design optimized for emerging markets",
-    "Decentralized identity verification protecting user privacy",
-    "Smart logistics optimization reducing delivery times",
-    "Interactive product visualization with AR/VR technology",
-    "Carbon-neutral shipping options for conscious consumers",
+  // Images from slider-img8 to slider-img1, with slider-img8 first
+  const sliderImages = [
+    "/slider/slider-img8.jpeg",
+    "/slider/slider-img7.jpeg",
+    "/slider/slider-img6.jpeg",
+    "/slider/slider-img5.jpeg",
+    "/slider/slider-img4.jpeg",
+    "/slider/slider-img3.jpeg",
+    "/slider/slider-img2.jpeg",
+    "/slider/slider-img1.jpeg",
   ];
 
   return (
@@ -102,12 +104,12 @@ const Vision: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Gallery */}
-          <div className="h-96">
-            <VerticalGallery
-              items={rightGalleryItems}
-              direction="down"
-              speed={35}
+          {/* Right Image Slider */}
+          <div className="h-[480px]">
+            <ImageSlider
+              images={sliderImages}
+              autoSlide={true}
+              slideInterval={4000}
               className="h-full"
             />
           </div>

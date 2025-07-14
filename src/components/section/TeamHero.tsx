@@ -19,7 +19,7 @@ const TeamHero: React.FC = () => {
       <div className="max-w-6xl mx-auto text-center relative z-10">
         {/* Main heading */}
         <div className="mb-8 animate-fade-in-up">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white montserrat mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white montserrat mb-6 leading-tight">
             Meet Our{" "}
             <span className="relative inline-block">
               <span className="text-[#4F46E5] bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#3B82F6] bg-clip-text text-transparent animate-gradient-x">
@@ -32,7 +32,7 @@ const TeamHero: React.FC = () => {
 
           {/* Subtitle */}
           <div className="relative">
-            <p className="text-xl md:text-3xl text-gray-300 urbanist max-w-5xl mx-auto leading-relaxed animate-fade-in-up delay-300">
+            <p className="text-xl md:text-2xl text-gray-300 urbanist max-w-5xl mx-auto leading-relaxed animate-fade-in-up delay-300">
               The brilliant minds behind{" "}
               <span className="text-[#4F46E5] font-semibold">
                 Pasar's innovation
