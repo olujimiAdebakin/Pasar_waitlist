@@ -55,10 +55,10 @@ const TeamHero: React.FC = () => {
           <div className="group text-center">
             <div className="bg-gradient-to-br from-[#4F46E5]/10 to-[#7C3AED]/10 rounded-2xl p-6 border border-[#4F46E5]/20 backdrop-blur-sm hover:border-[#4F46E5]/40 transition-all duration-300 hover:scale-105">
               <div className="text-4xl md:text-5xl font-bold text-[#4F46E5] montserrat mb-2 group-hover:scale-110 transition-transform duration-300">
-                15+
+                Diverse
               </div>
               <div className="text-gray-400 text-sm urbanist font-medium">
-                Team Members
+                 Team
               </div>
             </div>
           </div>
