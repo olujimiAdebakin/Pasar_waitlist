@@ -29,8 +29,8 @@ const sendMail = async (email) => {
     <p style="color: #4f46e5; font-weight: 600; margin-bottom: 10px; font-size: 1rem;">
       🚀 Invite your friends and earn early access perks:
     </p>
-    <a href="https://yourwebsite.com" style="color: #2563eb; font-size: 1.1rem; font-weight: bold; text-decoration: underline;">
-      https://yourwebsite.com
+    <a href="https://pasar-waitlist.vercel.app" style="color: #2563eb; font-size: 1.1rem; font-weight: bold; text-decoration: underline;">
+      https://pasar-waitlist.vercel.app
     </a>
   </div>
 
